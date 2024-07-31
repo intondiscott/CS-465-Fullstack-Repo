@@ -1,6 +1,6 @@
 var express = require("express");
 var router = express.Router();
-var contactPage = require("../controllers/contact");
+var { contact } = require("../controllers/contact");
 
-router.get("/", contactPage.contact);
+router.get("/", contact);
 module.exports = router;
