@@ -10,9 +10,9 @@ const tripsList = async (req, res) => {
   console.log(q);
 
   if (!q) {
-    return res.status(404).json({ stuff: "yes" });
+    return res.status(404).json({ error: error });
   } else {
-    return res.status(200).json(q);
+    return res.status(200).json({ trips: q });
   }
 };
 
