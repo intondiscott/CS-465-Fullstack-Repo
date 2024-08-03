@@ -9,8 +9,8 @@
   </div>
   <div id="navigation">
     <ul>
-      <li>
-        <a href="index.html">Home</a>
+      <li {{#if selected.index}}class="selected {{/if}}">
+        <a href="/">Home</a>
       </li>
       <li {{#if selected.travel}}class="selected {{/if}}">
         <a href="/travel">Travel</a>
