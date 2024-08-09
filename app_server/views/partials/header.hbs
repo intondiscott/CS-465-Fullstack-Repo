@@ -1,0 +1,35 @@
+<div id="header">
+  <div id="logo">
+    <a href="index.html"><img
+        src="images/logo.png"
+        alt="LOGO"
+        height="100"
+        width="200"
+      /></a>
+  </div>
+  <div id="navigation">
+    <ul>
+      <li {{#if selected.index}}class="selected {{/if}}">
+        <a href="/">Home</a>
+      </li>
+      <li {{#if selected.travel}}class="selected {{/if}}">
+        <a href="/travel">Travel</a>
+      </li>
+      <li {{#if selected.rooms}}class="selected {{/if}}">
+        <a href="/rooms">Rooms</a>
+      </li>
+      <li {{#if selected.meals}}class="selected {{/if}}">
+        <a href="/meals">Meals</a>
+      </li>
+      <li {{#if selected.news}}class="selected {{/if}}">
+        <a href="/news">News</a>
+      </li>
+      <li {{#if selected.about}}class="selected {{/if}}">
+        <a href="/about">About</a>
+      </li>
+      <li {{#if selected.contact}}class="selected {{/if}}">
+        <a href="/contact">Contact</a>
+      </li>
+    </ul>
+  </div>
+</div>

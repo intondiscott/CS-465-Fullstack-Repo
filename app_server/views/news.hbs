@@ -1,0 +1,74 @@
+<!-- Website template by freewebsitetemplates.com -->
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>News - Travlr Getaways Website Template</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+  </head>
+  <body>
+    <div id="background">
+      <div id="page">
+        {{> header }}
+        <div id="contents">
+          <div class="box">
+            <div>
+              <div id="news" class="body">
+                <div class="sidebar">
+                  <h3>Latest News</h3>
+                  <ul>
+                    <li>
+                      <a href="/news">2023 Best Beaches Contest Winners</a>
+                    </li>
+                    <li>
+                      <a href="/news">Top 10 Diving Spots</a>
+                    </li>
+                    <li>
+                      <a href="/news">Fishing ban to be implemented this
+                        year</a>
+                    </li>
+                    <li>
+                      <a href="/news">Lifeguard saves child from drowning</a>
+                    </li>
+                  </ul>
+                  <h3>Vaction Tips</h3>
+                  <ul>
+                    <li>
+                      <a href="/news">What to bring on the beach?</a>
+                    </li>
+                    <li>
+                      <a href="/news">Planning Fun Activities</a>
+                    </li>
+                    <li>
+                      <a href="/news">Diving Checklist</a>
+                    </li>
+                    <li>
+                      <a href="/news">First Aid</a>
+                    </li>
+                    <li>
+                      <a href="/news">How to Build a Sand Castle?</a>
+                    </li>
+                    <li>
+                      <a href="/news">Tanning Tips</a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h1>News</h1>
+                  {{#each newsInfo}}
+                    <img src="images/{{this.image}}" alt="Img" />
+                    {{{this.topic}}}
+                    <span class="time">{{this.date}}<br />
+                      by:
+                      {{this.author}}</span>
+                    {{{this.articleDescription}}}
+                  {{/each}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      {{> footer}}
+  </body>
+</html>
