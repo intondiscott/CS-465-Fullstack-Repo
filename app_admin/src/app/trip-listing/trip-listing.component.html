@@ -1,24 +1,9 @@
 <!-- <pre>{{trips | json}}</pre> -->
-<div class="row">
-  <div *ngFor="let trip of trips" class="col-auto m-auto mt-5">
-    <div class="card ml-4 border border" style="width: 18rem">
-      <div class="card-header p-3 fw-bolder">{{ trip.name }}</div>
-      <img
-        src="images/{{ trip.image }}"
-        alt="trip thumbnail"
-        class="card-img-top"
-      />
-      <div class="card-body">
-        <h6 class="card-subtitle mb-2 text-muted">
-          {{ trip.resort }}
-        </h6>
-        <p class="card-subtitle mt-3 mb-3 text-muted">
-          {{ trip.length }} only
-          {{ trip.perPerson | currency : "USD" : true }} per person
-        </p>
-
-        <p class="card-text" [innerHTML]="trip.description"></p>
-      </div>
-    </div>
+<div>
+  <button (click)="addTrip()" class="btn btn-info">Add Trip</button>
+</div>
+<div class="row mt-5 mb-5">
+  <div *ngFor="let trip of trips" class="col-auto mx-auto g-3">
+    <app-trip-card [trip]="trip" class="card-deck mt-2"></app-trip-card>
   </div>
 </div>
