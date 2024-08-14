@@ -1,0 +1,32 @@
+export const trips = [
+  {
+    code: 'GALR210214',
+    name: 'Gale reef',
+    length: '4 nights/ 5 days',
+    start: '2021-02-14T08:00:00Z',
+    resort: 'Emerald Bay, 3 stars',
+    perPerson: '799.00',
+    image: 'reef1.jpg',
+    description: '<p> This description is about the Gale reef...</p>',
+  },
+  {
+    code: 'DAWR210315',
+    name: "Dawson's reef",
+    length: '4 nights/ 5 days',
+    start: '2021-02-14T08:00:00Z',
+    resort: 'Blue Lagoon, 4 stars',
+    perPerson: '1199.00',
+    image: 'reef2.jpg',
+    description: "<p> This description is about the Dawson's reef...</p>",
+  },
+  {
+    code: 'CLAR210611',
+    name: "Claire's reef",
+    length: '4 nights/ 5 days',
+    start: '2021-02-14T08:00:00Z',
+    resort: 'Coral Sands, 5 stars',
+    perPerson: '1999.00',
+    image: 'reef3.jpg',
+    description: "<p> This description is about the Claire's reef...</p>",
+  },
+];
