@@ -9,6 +9,11 @@ const {
   tripsUpdateTrip,
 } = require("../controllers/trips");
 
+const { register } = require("../controllers/authentication");
+
+//define registration endpoint
+router.post("/register", register);
+
 //define route for the endpoint
 router.get("/trips", tripsList).post("/trips", tripsAddTrip); // GET: ALL (1) POST: formData (2)
 
