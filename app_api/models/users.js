@@ -25,7 +25,17 @@ userSchema.methods.setPassword = function (password) {
     .toString("hex");
 };
 
+// User password validation method
+userSchema.methods.validPassword = function (password) {
+  var hash = crypto
+    .pbkdf2Sync(password, this.salt, 1000, 64, "sha512")
+    .toString("hex");
+
+  return this.hash === hash;
+};
+
 // Method to generate a JSON Web Token for the current record
+
 userSchema.methods.generateJWT = function () {
   return jwt.sign(
     {
@@ -40,6 +50,5 @@ userSchema.methods.generateJWT = function () {
   //Token expires an hour from creation
 };
 
-const Users = mongoose.model("users", userSchema);
-
-module.exports = Users;
+const User = mongoose.model("users", userSchema);
+module.exports = User;
