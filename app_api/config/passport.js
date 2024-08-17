@@ -1,18 +1,18 @@
 const passport = require("passport");
-const localStrategy = require("passport-local").Strategy;
+const LocalStrategy = require("passport-local").Strategy;
 const mongoose = require("mongoose");
 const User = mongoose.model("users");
 
 passport.use(
-  new localStrategy(
+  new LocalStrategy(
     {
-      userNameField: "email",
+      usernameField: "email",
     },
     async (username, password, done) => {
       const q = await User.findOne({ email: username }).exec();
 
       //debugging
-      console.log(q);
+      //console.log(q);
 
       if (!q) {
         return done(null, false, { message: "Incorrect Username" });
