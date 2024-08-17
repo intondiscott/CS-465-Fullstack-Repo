@@ -15,15 +15,17 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link active" routerLink="list-trips"> Trips </a>
+      <a class="nav-item nav-link active text-white" routerLink="list-trips">
+        Trips
+      </a>
     </div>
   </div>
   <div class="navbar-end me-5">
     <a class="navbar-item" routerLink="login" *ngIf="!isLoggedIn()">
-      <span class="has-icon-left">Log In</span>
+      <span class="has-icon-left text-white">Log In</span>
     </a>
     <a class="navbar-item" (click)="onLogout()" *ngIf="isLoggedIn()">
-      <span class="has-icon-left">Log Out</span>
+      <span class="has-icon-left text-white">Log Out</span>
     </a>
   </div>
 </nav>
