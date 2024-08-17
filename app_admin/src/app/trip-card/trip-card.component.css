@@ -1,4 +1,5 @@
 .card {
+  width: 20rem;
   transition: 0.2s all ease-out;
   background-image: linear-gradient(
     to bottom right,
@@ -21,4 +22,30 @@
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
     rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   margin: 20px 0 20px 0;
+}
+.card-text {
+  height: 80px;
+  overflow: auto;
+  scrollbar-width: auto;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(70, 69, 69);
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(30, 115, 148);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
 }
